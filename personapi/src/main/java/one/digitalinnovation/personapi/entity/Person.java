@@ -20,6 +20,14 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
     @Column(nullable = false)
     private String firstName;
 
@@ -29,7 +37,6 @@ public class Person {
     @Column(nullable = false, unique = true)
     private String cpf;
 
-    @Column(nullable = true)
     private LocalDate birthDate;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})

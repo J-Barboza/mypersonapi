@@ -3,7 +3,8 @@ package one.digitalinnovation.personapi.dto.response;
 import lombok.Builder;
 import lombok.Data;
 
-@Data@Builder
+@Builder
+@Data
 public class MessageResponseDTO {
 
     private String message;
